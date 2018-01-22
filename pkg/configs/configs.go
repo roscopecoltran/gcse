@@ -30,12 +30,12 @@ const (
 
 var (
 	ServerAddr = ":8080"
-	ServerRoot = villa.Path("./server/")
+	ServerRoot = villa.Path("./server")
 
 	LoadTemplatePass = ""
 	AutoLoadTemplate = false
 
-	DataRoot = villa.Path("./shared/data/")
+	DataRoot = villa.Path("../shared/data/")
 
 	// producer: server, consumer: crawler
 	ImportPath villa.Path
@@ -60,7 +60,7 @@ var (
 func init() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
 
-	conf, err := ljconf.Load("conf.json")
+	conf, err := ljconf.Load("./conf.json")
 	if err != nil {
 		// we must make sure configuration exist
 		log.Fatal(err)
@@ -91,7 +91,7 @@ func init() {
 
 	NonStorePackageRegexps = conf.StringList("docdb.nonstore_regexps", nil)
 
-	bi.DataPath = conf.String("bi.data_path", "/tmp/gcse.bolt")
+	bi.DataPath = conf.String("bi.data_path", "./shared/data/gcse.bolt")
 	BiWebPath = conf.String("bi.web_path", BiWebPath)
 }
 

@@ -12,8 +12,8 @@ import (
 )
 
 func main() {
-	//	path := "data/docs"
-	path := "data/docs-updated"
+	//	path := "../../shared/data/docs"
+	path := "../../shared/data/docs-updated"
 	kvDir := kv.DirInput(sophie.LocalFsPath(path))
 
 	cnt, err := kvDir.PartCount()

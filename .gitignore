@@ -23,6 +23,12 @@ _testmain.go
 
 backup-conf.json
 
+backup-conf.yaml
+conf.yaml
+
+backup-conf.yml
+conf.yml
+
 *.exe
 *.gob
 *.bolt

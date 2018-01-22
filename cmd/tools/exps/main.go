@@ -30,7 +30,7 @@ func main() {
 	countAll, countReadme, countHasSents := 0, 0, 0
 	countSents := 0
 
-	f, err := villa.Path("exps/notfound.txt").Create()
+	f, err := villa.Path("../../shared/data/exps/notfound.txt").Create()
 	if err != nil {
 		log.Fatal(err)
 	}
