@@ -199,6 +199,7 @@ func main() {
 	cDB = gcse.LoadCrawlerDB()
 
 	// load pkgUTs
+	log.Println("pkgUTs: ", sophie.LocalFsPath(configs.DocsDBPath()))
 	pkgUTs, err := loadPackageUpdateTimes(sophie.LocalFsPath(configs.DocsDBPath()))
 	if err != nil {
 		log.Fatalf("loadPackageUpdateTimes failed: %v", err)

@@ -11,8 +11,11 @@ print-%: ; @echo $*=$($*)
 
 build: build-indexer build-crawler build-spider build-tocrawl build-mergedocs build-server 
 
+build-dist-%:
+	go build -o $(PWD)/dist/$* $(PWD)/cmd/$*/*.go
+
 build-%:
-	go build -o $(PWD)/bin/$* $(PWD)/cmd/$*/*.go
+	go build -o $(PWD)/$* $(PWD)/cmd/$*/*.go
 
 run-%:
 	# @echo $*=$($*)

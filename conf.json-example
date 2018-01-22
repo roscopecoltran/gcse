@@ -1,7 +1,7 @@
 {
     web: {
         // addr: ":8080"
-        // root: "./server/"
+        // root: "./cmd/server/"
 	// loadtemplatepass: ""
 	// autoloadtemplate: false
     }

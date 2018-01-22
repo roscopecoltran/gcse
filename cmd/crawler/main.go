@@ -97,7 +97,7 @@ func (crawlerMapper) MapEnd(c []sophie.Collector) error {
 }
 
 func cleanTempDir() {
-	tmpFn := villa.Path("../shared/data/gddo")
+	tmpFn := villa.Path("./shared/data/gddo")
 	if err := tmpFn.RemoveAll(); err != nil {
 		log.Printf("Delete %v failed: %v", tmpFn, err)
 	}

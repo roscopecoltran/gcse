@@ -30,12 +30,12 @@ const (
 
 var (
 	ServerAddr = ":8080"
-	ServerRoot = villa.Path("./server")
+	ServerRoot = villa.Path("./")
 
 	LoadTemplatePass = ""
 	AutoLoadTemplate = false
 
-	DataRoot = villa.Path("../shared/data/")
+	DataRoot = villa.Path("./shared/data/")
 
 	// producer: server, consumer: crawler
 	ImportPath villa.Path
@@ -46,7 +46,7 @@ var (
 	// configures of crawler
 	CrawlByGodocApi           = true
 	CrawlGithubUpdate         = true
-	CrawlerDuePerRun          = 1 * time.Hour
+	CrawlerDuePerRun          = 1 * time.Minute
 	CrawlerGithubClientID     = ""
 	CrawlerGithubClientSecret = ""
 	CrawlerGithubPersonal     = ""

@@ -7,6 +7,17 @@
 _obj
 _test
 
+./tocrawl
+./indexer
+./server
+./spider
+./mergedocs
+./countdocs
+./dump
+./fillfound
+./fixcrawldb
+./exps
+
 # Architecture specific extensions/prefixes
 *.[568vq]
 [568vq].out
