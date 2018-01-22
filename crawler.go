@@ -1,6 +1,7 @@
 package gcse
 
 import (
+	"context"
 	"crypto/tls"
 	"encoding/gob"
 	"encoding/json"
@@ -294,7 +295,7 @@ func fuseStars(a, b int) int {
 }
 
 func newDocGet(httpClient doc.HttpClient, pkg string, etag string) (p *doc.Package, err error) {
-	gp, err := glgddo.Get(httpClient.(*BlackRequest).client.(*http.Client),
+	gp, err := glgddo.Get(context.Background(), httpClient.(*BlackRequest).client.(*http.Client),
 		pkg, etag)
 	if err != nil {
 		if _, ok := err.(gosrc.NotModifiedError); ok {

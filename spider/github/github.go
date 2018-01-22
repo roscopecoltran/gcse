@@ -1,6 +1,7 @@
 package github
 
 import (
+	"context"
 	"errors"
 	"go/ast"
 	"go/parser"
@@ -86,20 +87,21 @@ type User struct {
 }
 
 func (s *Spider) waitForRate() error {
-	r := s.client.Rate()
-	if r.Limit == 0 {
+	r, _, _ := s.client.RateLimits(context.Background()) //  Rate()
+
+	if r.Core.Limit == 0 {
 		// no rate info yet
 		return nil
 	}
-	if r.Remaining > 0 {
+	if r.Core.Remaining > 0 {
 		return nil
 	}
-	d := r.Reset.Time.Sub(time.Now())
+	d := r.Core.Reset.Time.Sub(time.Now())
 	if d > time.Minute {
 		return errorsp.WithStacksAndMessage(ErrRateLimited, "time to wait: %v", d)
 	}
-	log.Printf("Quota used up (limit = %d), sleep until %v", r.Limit, r.Reset.Time)
-	timep.SleepUntil(r.Reset.Time)
+	log.Printf("Quota used up (limit = %d), sleep until %v", r.Core.Limit, r.Core.Reset.Time)
+	timep.SleepUntil(r.Core.Reset.Time)
 	return nil
 }
 
@@ -118,7 +120,7 @@ func repoInfoFromGithub(repo *github.Repository) *sppb.RepoInfo {
 
 func (s *Spider) ReadUser(name string) (*User, error) {
 	s.waitForRate()
-	repos, _, err := s.client.Repositories.List(name, nil)
+	repos, _, err := s.client.Repositories.List(context.Background(), name, nil)
 	if err != nil {
 		return nil, errorsp.WithStacksAndMessage(err, "Repositories.List %v failed", name)
 	}
@@ -138,7 +140,7 @@ func (s *Spider) ReadUser(name string) (*User, error) {
 
 func (s *Spider) ReadRepository(user, name string) (*sppb.RepoInfo, error) {
 	s.waitForRate()
-	repo, _, err := s.client.Repositories.Get(user, name)
+	repo, _, err := s.client.Repositories.Get(context.Background(), user, name)
 	if err != nil {
 		if isNotFound(err) {
 			return nil, errorsp.WithStacksAndMessage(ErrInvalidRepository, "respository github.com/%v/%v not found", user, name)
@@ -150,15 +152,16 @@ func (s *Spider) ReadRepository(user, name string) (*sppb.RepoInfo, error) {
 
 func (s *Spider) getFile(user, repo, path string) ([]byte, error) {
 	s.waitForRate()
-	c, _, _, err := s.client.Repositories.GetContents(user, repo, path, nil)
+	c, _, _, err := s.client.Repositories.GetContents(context.Background(), user, repo, path, nil)
 	if err != nil {
 		return nil, errorsp.WithStacks(err)
 	}
 	if stringsp.Get(c.Type) != "file" {
 		return nil, errorsp.NewWithStacks("Contents of %s/%s/%s is not a file: %v", user, repo, path, stringsp.Get(c.Type))
 	}
-	body, err := c.Decode()
-	return body, errorsp.WithStacks(err)
+
+	body, err := c.GetContent()
+	return []byte(body), errorsp.WithStacks(err)
 }
 
 func isReadmeFile(fn string) bool {
@@ -278,7 +281,7 @@ type Package struct {
 // Even an error is returned, the folders may still contain useful elements.
 func (s *Spider) ReadPackage(user, repo, path string) (*Package, []*sppb.FolderInfo, error) {
 	s.waitForRate()
-	_, cs, _, err := s.client.Repositories.GetContents(user, repo, path, nil)
+	_, cs, _, err := s.client.Repositories.GetContents(context.Background(), user, repo, path, nil)
 	if err != nil {
 		if isNotFound(err) {
 			return nil, nil, errorsp.WithStacksAndMessage(ErrInvalidPackage, "GetContents %v %v %v returns 404", user, repo, path)
@@ -381,7 +384,7 @@ func (s *Spider) SearchRepositories(q string) ([]github.Repository, error) {
 		q = strings.TrimSpace(q)
 	}
 	s.waitForRate()
-	res, _, err := s.client.Search.Repositories(q, &github.SearchOptions{})
+	res, _, err := s.client.Search.Repositories(context.Background(), q, &github.SearchOptions{})
 	if err != nil {
 		return nil, errorsp.WithStacksAndMessage(err, "Search.Repositories %q failed: %+v", q, err)
 	}
@@ -392,7 +395,7 @@ func (s *Spider) RepoBranchSHA(owner, repo, branch string) (sha string, err erro
 	if err := s.waitForRate(); err != nil {
 		return "", err
 	}
-	b, _, err := s.client.Repositories.GetBranch(owner, repo, branch)
+	b, _, err := s.client.Repositories.GetBranch(context.Background(), owner, repo, branch)
 	if err != nil {
 		if isNotFound(err) {
 			return "", errorsp.WithStacksAndMessage(ErrInvalidRepository, "GetBranch %v %v %v failed", owner, repo, branch)
@@ -409,7 +412,7 @@ func (s *Spider) getTree(owner, repo, sha string, recursive bool) (*github.Tree,
 	if err := s.waitForRate(); err != nil {
 		return nil, err
 	}
-	tree, _, err := s.client.Git.GetTree(owner, repo, sha, true)
+	tree, _, err := s.client.Git.GetTree(context.Background(), owner, repo, sha, true)
 	if err != nil {
 		if isNotFound(err) {
 			return nil, errorsp.WithStacksAndMessage(ErrInvalidRepository, "GetTree %v %v %v failed", owner, repo, sha)
