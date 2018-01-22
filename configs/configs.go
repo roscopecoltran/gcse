@@ -35,7 +35,7 @@ var (
 	LoadTemplatePass = ""
 	AutoLoadTemplate = false
 
-	DataRoot = villa.Path("./data/")
+	DataRoot = villa.Path("./shared/data/")
 
 	// producer: server, consumer: crawler
 	ImportPath villa.Path
