@@ -1,0 +1,110 @@
+syntax = "proto3";
+
+package gcse.spider;
+
+option go_package = "sppb";
+
+import "github.com/golang/protobuf/ptypes/timestamp/timestamp.proto";
+
+message GoFileInfo {
+	enum Status {
+		Unknown      = 0;
+		ParseSuccess = 1;
+		ParseFailed  = 2;
+		ShouldIgnore = 3;
+	}
+	Status status = 1;
+
+	string          name        = 2;
+	string          description = 3;
+	bool            is_test     = 4;
+	repeated string imports     = 5;
+}
+
+message RepoInfo {
+	// The timestamp this repo-info is crawled
+	google.protobuf.Timestamp crawling_time = 1;
+
+	int32  stars       = 2;
+	string description = 3;
+	// Where this project was forked from, full path
+	string source      = 5;
+	// As far as we know, when this repo was updated
+	google.protobuf.Timestamp last_updated = 4;
+}
+
+// Information for a non-repository folder.
+message FolderInfo {
+	// E.g. "sub"
+	string name = 1;
+
+	// E.g. "spider/sub"
+	string path = 2;
+
+	string sha = 3;
+	string html_url = 4;
+
+	// The timestamp this folder-info is crawled
+	google.protobuf.Timestamp crawling_time = 5;
+}
+
+message CrawlingInfo {
+	// The timestamp the related entry was crawled
+	google.protobuf.Timestamp crawling_time = 1;
+	string etag = 2;
+}
+
+message HistoryEvent {
+	message Action {
+		enum Enum {
+			None    = 0;  // No action
+			Success = 1;  // Success crawling and the package is valid
+			Failed  = 2;  // Failed crawling, do not know validity of the package
+			Invalid = 3;  // Success crawling and the package is invalid
+		}
+	}
+	google.protobuf.Timestamp timestamp = 1;
+	Action.Enum action = 2;
+}
+
+message HistoryInfo {
+	repeated HistoryEvent events = 1;
+
+	google.protobuf.Timestamp found_time = 2;
+	// Possible value:
+	//   web                  added from web
+	//   user:<user>          found from user crawling
+	//   parent               found by crawling his parent
+	//   imported:<pkg>       imported by a <pkg>
+	//   testimported:<pkg>   test imported by a <pkg>
+	//   package:<pkg>
+	//   reference:<pkg>      referenced in the readme file of <pkg>
+	//   godoc                found by godoc.org/api
+	string found_way = 3;
+
+	google.protobuf.Timestamp latest_success = 4;
+	google.protobuf.Timestamp latest_failed = 5;
+}
+
+message Package {
+	// package "name"
+	string Name        = 1;
+
+	// Relative path to the repository, "" for root repository, "/sub" for a sub package.
+	// Full path: site + "/" + user + "/" + repo + path
+	string Path        = 2;
+
+    string Synopsis    = 9;
+	string Description = 3;
+	// No directory info
+	string ReadmeFn    = 4;
+
+	// Raw content, cound be md, txt, etc.
+	string ReadmeData  = 5;
+
+	repeated string Imports     = 6;
+	repeated string TestImports = 7;
+
+	// URL to the package source code.
+	string url = 8;
+}

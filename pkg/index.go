@@ -17,7 +17,8 @@ import (
 	"github.com/daviddengcn/go-index"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/mr"
-	"github.com/roscopecoltran/gcse/utils"
+
+	"github.com/roscopecoltran/gcse/pkg/utils"
 )
 
 const (

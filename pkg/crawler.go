@@ -28,14 +28,15 @@ import (
 	"github.com/daviddengcn/go-villa"
 	"github.com/daviddengcn/sophie"
 	"github.com/golang/gddo/gosrc"
-	"github.com/roscopecoltran/gcse/configs"
-	"github.com/roscopecoltran/gcse/spider/github"
-	"github.com/roscopecoltran/gcse/store"
-	"github.com/roscopecoltran/gcse/utils"
+
+	"github.com/roscopecoltran/gcse/pkg/configs"
+	"github.com/roscopecoltran/gcse/pkg/spider/github"
+	"github.com/roscopecoltran/gcse/pkg/store"
+	"github.com/roscopecoltran/gcse/pkg/utils"
 
 	glgddo "github.com/golang/gddo/doc"
-	sppb "github.com/roscopecoltran/gcse/proto/spider"
-	stpb "github.com/roscopecoltran/gcse/proto/store"
+	sppb "github.com/roscopecoltran/gcse/pkg/proto/spider"
+	stpb "github.com/roscopecoltran/gcse/pkg/proto/store"
 )
 
 const (

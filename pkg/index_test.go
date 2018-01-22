@@ -15,8 +15,8 @@ import (
 
 func TestIndex(t *testing.T) {
 	const (
-		package0 = "github.com/roscopecoltran/gcse"
-		package1 = "github.com/roscopecoltran/gcse/indexer"
+		package0 = "github.com/roscopecoltran/gcse/pkg"
+		package1 = "github.com/roscopecoltran/gcse/cmd/indexer"
 		package2 = "github.com/daviddengcn/go-villa"
 	)
 

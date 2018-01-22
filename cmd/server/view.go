@@ -10,7 +10,8 @@ import (
 	"github.com/golangplus/bytes"
 
 	"github.com/ajstarks/svgo"
-	"github.com/roscopecoltran/gcse"
+
+	"github.com/roscopecoltran/gcse/pkg"
 )
 
 func pageView(w http.ResponseWriter, r *http.Request) {

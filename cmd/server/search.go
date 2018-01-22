@@ -16,7 +16,8 @@ import (
 
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/go-index"
-	"github.com/roscopecoltran/gcse"
+
+	"github.com/roscopecoltran/gcse/pkg"
 )
 
 type Hit struct {

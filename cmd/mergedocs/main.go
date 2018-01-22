@@ -17,8 +17,9 @@ import (
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
 	"github.com/daviddengcn/sophie/mr"
-	"github.com/roscopecoltran/gcse"
-	"github.com/roscopecoltran/gcse/configs"
+
+	"github.com/roscopecoltran/gcse/pkg"
+	"github.com/roscopecoltran/gcse/pkg/configs"
 )
 
 func main() {

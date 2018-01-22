@@ -4,7 +4,7 @@ import (
 	"log"
 	"runtime"
 
-	"github.com/roscopecoltran/gcse/configs"
+	"github.com/roscopecoltran/gcse/pkg/configs"
 )
 
 func main() {

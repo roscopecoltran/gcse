@@ -6,7 +6,8 @@ import (
 	"time"
 
 	"github.com/daviddengcn/gddo/doc"
-	"github.com/roscopecoltran/gcse/configs"
+
+	"github.com/roscopecoltran/gcse/pkg/configs"
 )
 
 const (

@@ -13,12 +13,13 @@ import (
 	"github.com/daviddengcn/bolthelper"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/go-index"
-	"github.com/roscopecoltran/gcse"
-	"github.com/roscopecoltran/gcse/configs"
-	"github.com/roscopecoltran/gcse/store"
-	"github.com/roscopecoltran/gcse/utils"
 
-	sppb "github.com/roscopecoltran/gcse/proto/spider"
+	"github.com/roscopecoltran/gcse/pkg"
+	"github.com/roscopecoltran/gcse/pkg/configs"
+	"github.com/roscopecoltran/gcse/pkg/store"
+	"github.com/roscopecoltran/gcse/pkg/utils"
+
+	sppb "github.com/roscopecoltran/gcse/pkg/proto/spider"
 )
 
 var (

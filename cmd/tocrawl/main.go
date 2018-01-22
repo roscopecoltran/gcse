@@ -17,14 +17,15 @@ import (
 	"github.com/daviddengcn/go-villa"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
-	"github.com/roscopecoltran/gcse"
-	"github.com/roscopecoltran/gcse/configs"
-	"github.com/roscopecoltran/gcse/spider/github"
-	"github.com/roscopecoltran/gcse/spider/godocorg"
-	"github.com/roscopecoltran/gcse/store"
-	"github.com/roscopecoltran/gcse/utils"
 
-	sppb "github.com/roscopecoltran/gcse/proto/spider"
+	"github.com/roscopecoltran/gcse/pkg"
+	"github.com/roscopecoltran/gcse/pkg/configs"
+	"github.com/roscopecoltran/gcse/pkg/spider/github"
+	"github.com/roscopecoltran/gcse/pkg/spider/godocorg"
+	"github.com/roscopecoltran/gcse/pkg/store"
+	"github.com/roscopecoltran/gcse/pkg/utils"
+
+	sppb "github.com/roscopecoltran/gcse/pkg/proto/spider"
 )
 
 var (

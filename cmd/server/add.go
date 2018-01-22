@@ -7,7 +7,8 @@ import (
 	"strings"
 
 	"github.com/daviddengcn/gddo/doc"
-	"github.com/roscopecoltran/gcse"
+
+	"github.com/roscopecoltran/gcse/pkg"
 )
 
 func filterPackages(pkgs []string) (res []string) {

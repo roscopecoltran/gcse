@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package gcse.store;
+
+option go_package = "stpb";
+
+import "github.com/roscopecoltran/gcse/pkg/proto/spider/spider.proto";
+
+message PackageInfo {
+	string name = 1;
+	string package = 2;
+	string author = 3;
+	int32 stars = 4;
+	string synopsis = 5;
+	string description = 6;
+	string project_url = 7;
+	string readme_fn = 8;
+	string readme_data = 9;
+	repeated string imports = 10;
+	repeated string test_imports = 11;
+	repeated string exported = 12;
+	repeated string references = 18;
+
+	gcse.spider.CrawlingInfo crawling_info = 17;
+
+	// Available if the package is not the repo's root.
+	gcse.spider.FolderInfo folder_info = 14;
+
+	// Available if the package is the repo's root.
+	gcse.spider.RepoInfo repo_info = 15;
+}
+
+message PersonInfo {
+	gcse.spider.CrawlingInfo crawling_info = 1;
+}
+
+message Repository {
+	string branch    = 6;
+	string signature = 7;
+
+	// map from relative path, e.g. "proto/store", to Package
+	map<string, gcse.spider.Package> packages = 8;
+
+	string ReadmeFn   = 2;  // No directory info
+	string ReadmeData = 3;  // Raw content, cound be md, txt, etc.
+	int32 stars       = 4;
+
+	gcse.spider.CrawlingInfo crawling_info = 5;
+}

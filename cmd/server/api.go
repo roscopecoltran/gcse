@@ -13,7 +13,8 @@ import (
 	"golang.org/x/net/trace"
 
 	"github.com/daviddengcn/go-easybi"
-	"github.com/roscopecoltran/gcse"
+
+	"github.com/roscopecoltran/gcse/pkg"
 )
 
 func filterFunc(s string, f func(r rune) bool) string {

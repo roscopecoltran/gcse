@@ -7,10 +7,11 @@ import (
 
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/sophie/kv"
-	"github.com/roscopecoltran/gcse"
-	"github.com/roscopecoltran/gcse/configs"
-	"github.com/roscopecoltran/gcse/store"
-	"github.com/roscopecoltran/gcse/utils"
+
+	"github.com/roscopecoltran/gcse/pkg"
+	"github.com/roscopecoltran/gcse/pkg/configs"
+	"github.com/roscopecoltran/gcse/pkg/store"
+	"github.com/roscopecoltran/gcse/pkg/utils"
 )
 
 func clearOutdatedIndex() error {

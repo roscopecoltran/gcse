@@ -9,11 +9,12 @@ import (
 	"github.com/golangplus/testing/assert"
 	"github.com/golangplus/time"
 
-	"github.com/roscopecoltran/gcse/configs"
-	"github.com/roscopecoltran/gcse/proto/spider"
-	"github.com/roscopecoltran/gcse/proto/store"
-	"github.com/roscopecoltran/gcse/spider/github"
-	"github.com/roscopecoltran/gcse/store"
+	"github.com/roscopecoltran/gcse/pkg/configs"
+	"github.com/roscopecoltran/gcse/pkg/spider/github"
+	"github.com/roscopecoltran/gcse/pkg/store"
+
+	"github.com/roscopecoltran/gcse/pkg/proto/spider"
+	"github.com/roscopecoltran/gcse/pkg/proto/store"
 )
 
 func init() {

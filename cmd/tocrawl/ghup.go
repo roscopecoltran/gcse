@@ -8,10 +8,11 @@ import (
 
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/golangplus/strings"
-	"github.com/roscopecoltran/gcse"
-	"github.com/roscopecoltran/gcse/store"
 
-	sppb "github.com/roscopecoltran/gcse/proto/spider"
+	"github.com/roscopecoltran/gcse/pkg"
+	"github.com/roscopecoltran/gcse/pkg/store"
+
+	sppb "github.com/roscopecoltran/gcse/pkg/proto/spider"
 )
 
 // touchPackage forces a package to update if it was not crawled before a

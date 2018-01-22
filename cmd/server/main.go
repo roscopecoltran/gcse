@@ -17,8 +17,9 @@ import (
 	"github.com/golangplus/time"
 
 	"github.com/daviddengcn/go-easybi"
-	"github.com/roscopecoltran/gcse/configs"
 	"github.com/russross/blackfriday"
+
+	"github.com/roscopecoltran/gcse/pkg/configs"
 )
 
 type UIUtils struct{}
