@@ -8,11 +8,11 @@ import (
 	"github.com/golangplus/errors"
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/proto/spider"
-	"github.com/daviddengcn/gcse/proto/store"
-	"github.com/daviddengcn/gcse/spider/github"
-	"github.com/daviddengcn/gcse/store"
+	"github.com/roscopecoltran/gcse/configs"
+	"github.com/roscopecoltran/gcse/proto/spider"
+	"github.com/roscopecoltran/gcse/proto/store"
+	"github.com/roscopecoltran/gcse/spider/github"
+	"github.com/roscopecoltran/gcse/store"
 )
 
 type RepositoryInfo struct {

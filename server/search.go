@@ -14,9 +14,9 @@ import (
 	"github.com/golangplus/strings"
 	"golang.org/x/net/trace"
 
-	"github.com/daviddengcn/gcse"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/go-index"
+	"github.com/roscopecoltran/gcse"
 )
 
 type Hit struct {

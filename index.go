@@ -14,10 +14,10 @@ import (
 	"golang.org/x/crypto/ssh/terminal"
 
 	"github.com/cheggaaa/pb"
-	"github.com/daviddengcn/gcse/utils"
 	"github.com/daviddengcn/go-index"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/mr"
+	"github.com/roscopecoltran/gcse/utils"
 )
 
 const (

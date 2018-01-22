@@ -8,7 +8,7 @@ import (
 	"github.com/golangplus/errors"
 
 	"github.com/daviddengcn/bolthelper"
-	"github.com/daviddengcn/gcse/proto/store"
+	"github.com/roscopecoltran/gcse/proto/store"
 )
 
 // Returns an empty (non-nil) PackageInfo if not found.

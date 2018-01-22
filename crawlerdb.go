@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/daviddengcn/gddo/doc"
+	"github.com/roscopecoltran/gcse/configs"
 )
 
 const (

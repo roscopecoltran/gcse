@@ -8,11 +8,11 @@ import (
 
 	"github.com/golangplus/strings"
 
-	"github.com/daviddengcn/gcse/utils"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/go-ljson-conf"
 	"github.com/daviddengcn/go-villa"
 	"github.com/daviddengcn/sophie"
+	"github.com/roscopecoltran/gcse/utils"
 )
 
 const (

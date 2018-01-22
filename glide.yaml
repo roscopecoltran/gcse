@@ -1,0 +1,54 @@
+package: github.com/roscopecoltran/gcse
+import:
+- package: github.com/agonopol/go-stem
+- package: github.com/ajstarks/svgo
+- package: github.com/cheggaaa/pb
+- package: github.com/daviddengcn/bolthelper
+- package: github.com/daviddengcn/gddo
+  subpackages:
+  - doc
+- package: github.com/daviddengcn/go-easybi
+- package: github.com/daviddengcn/go-index
+- package: github.com/daviddengcn/go-ljson-conf
+- package: github.com/daviddengcn/go-villa
+- package: github.com/daviddengcn/sophie
+  subpackages:
+  - kv
+  - mr
+- package: github.com/golang/gddo
+  subpackages:
+  - doc
+  - gosrc
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+  - ptypes
+  - ptypes/timestamp
+- package: github.com/golangplus/bytes
+- package: github.com/golangplus/container
+  subpackages:
+  - heap
+- package: github.com/golangplus/encoding
+  subpackages:
+  - json
+- package: github.com/golangplus/errors
+- package: github.com/golangplus/fmt
+- package: github.com/golangplus/sort
+- package: github.com/golangplus/strings
+- package: github.com/golangplus/time
+- package: github.com/google/go-github
+  subpackages:
+  - github
+- package: github.com/howeyc/fsnotify
+- package: github.com/russross/blackfriday
+- package: golang.org/x/crypto
+  subpackages:
+  - ssh/terminal
+- package: golang.org/x/net
+  subpackages:
+  - trace
+- package: golang.org/x/oauth2
+testImport:
+- package: github.com/golangplus/testing
+  subpackages:
+  - assert

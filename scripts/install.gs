@@ -6,7 +6,7 @@ goGet := flag.Bool("go_get", true, `Whether do "go get" before installing`)
 
 flag.Parse()
 
-const GCSE = "github.com/daviddengcn/gcse"
+const GCSE = "github.com/roscopecoltran/gcse"
 APPS := []string {
   "server", "pipelines/tocrawl", "pipelines/crawler", "pipelines/mergedocs", "pipelines/indexer",
 }

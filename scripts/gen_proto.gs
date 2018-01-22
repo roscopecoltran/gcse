@@ -2,7 +2,7 @@
 
 import "path/filepath"
 
-const GCSE = "github.com/daviddengcn/gcse"
+const GCSE = "github.com/roscopecoltran/gcse"
 
 
 gopath := Eval("go", "env", "GOPATH") + "/src"

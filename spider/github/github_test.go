@@ -6,7 +6,7 @@ import (
 	"github.com/golangplus/errors"
 	"github.com/golangplus/testing/assert"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
 )
 
 //func TestReadUser(t *testing.T) {
@@ -36,7 +36,7 @@ import (
 //	assert.Equal(t, "pkg.Name", pkg.Name, "pkg")
 //	sort.Strings(pkg.Imports)
 //	assert.Equal(t, "pkg.Imports", pkg.Imports, []string{
-//		"github.com/daviddengcn/gcse/spider/github",
+//		"github.com/roscopecoltran/gcse/spider/github",
 //		"github.com/golangplus/strings",
 //	})
 //	assert.Equal(t, "pkg.TestImports", pkg.TestImports, []string{"github.com/golangplus/testing/assert"})

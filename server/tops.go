@@ -9,7 +9,7 @@ import (
 	"github.com/golangplus/container/heap"
 	"github.com/golangplus/strings"
 
-	"github.com/daviddengcn/gcse"
+	"github.com/roscopecoltran/gcse"
 )
 
 type StatItem struct {

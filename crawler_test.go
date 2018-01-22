@@ -10,9 +10,9 @@ import (
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/testing/assert"
 
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/daviddengcn/go-villa"
+	"github.com/roscopecoltran/gcse/configs"
 )
 
 func TestReadmeToText(t *testing.T) {
@@ -54,7 +54,7 @@ func TestCrawlPackage(t *testing.T) {
 		doc.SetGithubCredentials(configs.CrawlerGithubClientID, configs.CrawlerGithubClientSecret)
 	}
 
-	pkg := "github.com/daviddengcn/gcse"
+	pkg := "github.com/roscopecoltran/gcse"
 	httpClient := GenHttpClient("")
 	p, _, err := CrawlPackage(httpClient, pkg, "")
 	if err != nil {
@@ -90,7 +90,7 @@ func TestDocDB(t *testing.T) {
 	var db DocDB = PackedDocDB{NewMemDB("", "")}
 
 	info := DocInfo{
-		Name: "github.com/daviddengcn/gcse",
+		Name: "github.com/roscopecoltran/gcse",
 	}
 	db.Put("hello", info)
 	var info2 DocInfo
@@ -117,7 +117,7 @@ func TestDocDB_Export(t *testing.T) {
 	var db DocDB = PackedDocDB{NewMemDB("", "")}
 
 	info := DocInfo{
-		Name: "github.com/daviddengcn/gcse",
+		Name: "github.com/roscopecoltran/gcse",
 	}
 
 	db.Put("go", info)
@@ -135,7 +135,7 @@ func TestDocDB_Export(t *testing.T) {
 			return errors.New("Not a DocInfo object")
 		}
 		assert.StringEqual(t, "info.Name", info.Name,
-			"github.com/daviddengcn/gcse")
+			"github.com/roscopecoltran/gcse")
 		count++
 		return nil
 	}); err != nil {
@@ -163,8 +163,8 @@ func TestCrawlingEntry(t *testing.T) {
 
 func TestFullProjectOfPackage(t *testing.T) {
 	DATA := []string{
-		"github.com/daviddengcn/gcse", "github.com/daviddengcn/gcse",
-		"github.com/daviddengcn/gcse/index", "github.com/daviddengcn/gcse",
+		"github.com/roscopecoltran/gcse", "github.com/roscopecoltran/gcse",
+		"github.com/roscopecoltran/gcse/index", "github.com/roscopecoltran/gcse",
 		"code.google.com/p/go.net/websocket", "code.google.com/p/go.net",
 	}
 

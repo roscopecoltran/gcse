@@ -11,14 +11,14 @@ import (
 	"github.com/golangplus/strings"
 
 	"github.com/daviddengcn/bolthelper"
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/store"
-	"github.com/daviddengcn/gcse/utils"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/go-index"
+	"github.com/roscopecoltran/gcse"
+	"github.com/roscopecoltran/gcse/configs"
+	"github.com/roscopecoltran/gcse/store"
+	"github.com/roscopecoltran/gcse/utils"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
 )
 
 var (

@@ -9,8 +9,8 @@ import (
 	"github.com/golangplus/testing/assert"
 
 	"github.com/daviddengcn/bolthelper"
-	sppb "github.com/daviddengcn/gcse/proto/spider"
 	"github.com/daviddengcn/go-villa"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
 )
 
 func TestUpdateReadDeletePackageHistory(t *testing.T) {

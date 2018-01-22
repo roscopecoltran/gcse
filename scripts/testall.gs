@@ -1,6 +1,6 @@
 #!/usr/bin/env gosl
 
-GCSE := "github.com/daviddengcn/gcse"
+GCSE := "github.com/roscopecoltran/gcse"
 
 APPS := []string {
   "server", "pipelines/tocrawl", "pipelines/crawler", "pipelines/mergedocs", "pipelines/indexer", "pipelines/spider", "store", "spider",

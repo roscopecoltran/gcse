@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
+	"github.com/roscopecoltran/gcse"
+	"github.com/roscopecoltran/gcse/configs"
 )
 
 // processing sumitted packages (from go-search.org/add path)

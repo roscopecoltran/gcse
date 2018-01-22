@@ -19,10 +19,10 @@ import (
 	"github.com/golangplus/time"
 	"golang.org/x/oauth2"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
 
-	"github.com/daviddengcn/gcse/spider"
 	"github.com/google/go-github/github"
+	"github.com/roscopecoltran/gcse/spider"
 )
 
 var ErrInvalidPackage = errors.New("the package is not a Go package")

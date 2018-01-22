@@ -9,7 +9,7 @@ import (
 
 	"github.com/daviddengcn/bolthelper"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
 )
 
 func TestNullFileCache(t *testing.T) {

@@ -12,19 +12,19 @@ import (
 	"github.com/golangplus/sort"
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider/github"
-	"github.com/daviddengcn/gcse/spider/godocorg"
-	"github.com/daviddengcn/gcse/store"
-	"github.com/daviddengcn/gcse/utils"
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/go-villa"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
+	"github.com/roscopecoltran/gcse"
+	"github.com/roscopecoltran/gcse/configs"
+	"github.com/roscopecoltran/gcse/spider/github"
+	"github.com/roscopecoltran/gcse/spider/godocorg"
+	"github.com/roscopecoltran/gcse/store"
+	"github.com/roscopecoltran/gcse/utils"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
 )
 
 var (

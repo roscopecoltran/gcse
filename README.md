@@ -9,11 +9,11 @@ This is the root package with shared functions.
 
 Sub packages are commands for running:
 
-* [HTTP Server](http://github.com/daviddengcn/gcse/server): Searching and web service
-* [ToCrawl](http://github.com/daviddengcn/gcse/tocrawl): Find packages to crawl.
-* [Crawler](http://github.com/daviddengcn/gcse/crawler): Crawling package files.
-* [MergeDocs](http://github.com/daviddengcn/gcse/mergedocs): Merge crawled package files with doc DB.
-* [Indexer](http://github.com/daviddengcn/gcse/indexer): Analyzing package information and generating indexed data for searching.
+* [HTTP Server](http://github.com/roscopecoltran/gcse/server): Searching and web service
+* [ToCrawl](http://github.com/roscopecoltran/gcse/tocrawl): Find packages to crawl.
+* [Crawler](http://github.com/roscopecoltran/gcse/crawler): Crawling package files.
+* [MergeDocs](http://github.com/roscopecoltran/gcse/mergedocs): Merge crawled package files with doc DB.
+* [Indexer](http://github.com/roscopecoltran/gcse/indexer): Analyzing package information and generating indexed data for searching.
 
 Development
 -----------

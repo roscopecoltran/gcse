@@ -16,8 +16,8 @@ import (
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/daviddengcn/go-easybi"
+	"github.com/roscopecoltran/gcse/configs"
 	"github.com/russross/blackfriday"
 )
 

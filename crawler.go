@@ -21,20 +21,20 @@ import (
 	"github.com/golangplus/strings"
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider/github"
-	"github.com/daviddengcn/gcse/store"
-	"github.com/daviddengcn/gcse/utils"
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/go-index"
 	"github.com/daviddengcn/go-villa"
 	"github.com/daviddengcn/sophie"
 	"github.com/golang/gddo/gosrc"
+	"github.com/roscopecoltran/gcse/configs"
+	"github.com/roscopecoltran/gcse/spider/github"
+	"github.com/roscopecoltran/gcse/store"
+	"github.com/roscopecoltran/gcse/utils"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
-	stpb "github.com/daviddengcn/gcse/proto/store"
 	glgddo "github.com/golang/gddo/doc"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
+	stpb "github.com/roscopecoltran/gcse/proto/store"
 )
 
 const (

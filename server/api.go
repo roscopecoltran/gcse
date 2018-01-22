@@ -12,8 +12,8 @@ import (
 	"github.com/golangplus/encoding/json"
 	"golang.org/x/net/trace"
 
-	"github.com/daviddengcn/gcse"
 	"github.com/daviddengcn/go-easybi"
+	"github.com/roscopecoltran/gcse"
 )
 
 func filterFunc(s string, f func(r rune) bool) string {

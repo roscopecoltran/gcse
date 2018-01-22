@@ -5,12 +5,12 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/store"
-	"github.com/daviddengcn/gcse/utils"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/sophie/kv"
+	"github.com/roscopecoltran/gcse"
+	"github.com/roscopecoltran/gcse/configs"
+	"github.com/roscopecoltran/gcse/store"
+	"github.com/roscopecoltran/gcse/utils"
 )
 
 func clearOutdatedIndex() error {

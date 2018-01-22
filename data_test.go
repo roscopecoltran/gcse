@@ -13,13 +13,13 @@ import (
 func TestDocInfo(t *testing.T) {
 	src := DocInfo{
 		Name:        "gcse",
-		Package:     "github.com/daviddengcn/gcse",
+		Package:     "github.com/roscopecoltran/gcse",
 		Author:      "github.com/daviddengcn",
 		LastUpdated: time.Now(),
 		StarCount:   10,
 		Synopsis:    "Go Package Search Engine",
 		Description: "More details about GCSE",
-		ProjectURL:  "http://github.com/daviddengcn/gcse",
+		ProjectURL:  "http://github.com/roscopecoltran/gcse",
 		ReadmeFn:    "readme.txt",
 		ReadmeData:  "Just read me",
 		Imports: []string{

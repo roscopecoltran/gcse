@@ -8,10 +8,10 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golangplus/testing/assert"
 
-	"github.com/daviddengcn/gcse/configs"
+	"github.com/roscopecoltran/gcse/configs"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
-	stpb "github.com/daviddengcn/gcse/proto/store"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
+	stpb "github.com/roscopecoltran/gcse/proto/store"
 )
 
 func init() {

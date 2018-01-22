@@ -5,7 +5,7 @@ import (
 
 	"github.com/golangplus/testing/assert"
 
-	stpb "github.com/daviddengcn/gcse/proto/store"
+	stpb "github.com/roscopecoltran/gcse/proto/store"
 )
 
 func TestUpdateReadDeleteRepository(t *testing.T) {

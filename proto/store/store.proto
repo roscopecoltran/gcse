@@ -4,7 +4,7 @@ package gcse.store;
 
 option go_package = "stpb";
 
-import "github.com/daviddengcn/gcse/proto/spider/spider.proto";
+import "github.com/roscopecoltran/gcse/proto/spider/spider.proto";
 
 message PackageInfo {
 	string name = 1;

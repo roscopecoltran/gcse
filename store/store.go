@@ -9,12 +9,12 @@ import (
 	"github.com/golangplus/errors"
 
 	"github.com/daviddengcn/bolthelper"
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
+	"github.com/roscopecoltran/gcse/configs"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
-	stpb "github.com/daviddengcn/gcse/proto/store"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
+	stpb "github.com/roscopecoltran/gcse/proto/store"
 )
 
 var (

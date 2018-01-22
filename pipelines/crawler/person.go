@@ -9,13 +9,13 @@ import (
 
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
 	"github.com/daviddengcn/sophie/mr"
+	"github.com/roscopecoltran/gcse"
+	"github.com/roscopecoltran/gcse/configs"
 )
 
 const (

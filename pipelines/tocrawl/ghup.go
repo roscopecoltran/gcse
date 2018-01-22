@@ -6,12 +6,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/store"
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/golangplus/strings"
+	"github.com/roscopecoltran/gcse"
+	"github.com/roscopecoltran/gcse/store"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
 )
 
 // touchPackage forces a package to update if it was not crawled before a

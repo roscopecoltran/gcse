@@ -9,8 +9,8 @@ import (
 	"github.com/golangplus/strings"
 	"github.com/golangplus/time"
 
-	sppb "github.com/daviddengcn/gcse/proto/spider"
-	stpb "github.com/daviddengcn/gcse/proto/store"
+	sppb "github.com/roscopecoltran/gcse/proto/spider"
+	stpb "github.com/roscopecoltran/gcse/proto/store"
 )
 
 const (

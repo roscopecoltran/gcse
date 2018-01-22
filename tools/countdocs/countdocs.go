@@ -5,9 +5,9 @@ import (
 
 	"github.com/golangplus/fmt"
 
-	"github.com/daviddengcn/gcse"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
+	"github.com/roscopecoltran/gcse"
 )
 
 func main() {

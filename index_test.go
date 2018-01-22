@@ -15,8 +15,8 @@ import (
 
 func TestIndex(t *testing.T) {
 	const (
-		package0 = "github.com/daviddengcn/gcse"
-		package1 = "github.com/daviddengcn/gcse/indexer"
+		package0 = "github.com/roscopecoltran/gcse"
+		package1 = "github.com/roscopecoltran/gcse/indexer"
 		package2 = "github.com/daviddengcn/go-villa"
 	)
 
@@ -92,14 +92,14 @@ func TestIndex(t *testing.T) {
 	}
 	assert.StringEqual(t, "all", pkgs,
 		[]string{
-			"github.com/daviddengcn/gcse",
+			"github.com/roscopecoltran/gcse",
 			"github.com/daviddengcn/go-villa",
-			"github.com/daviddengcn/gcse/indexer",
+			"github.com/roscopecoltran/gcse/indexer",
 		})
 
 	var gcseInfo HitInfo
 	if err := ts.Search(map[string]stringsp.Set{
-		IndexPkgField: stringsp.NewSet("github.com/daviddengcn/gcse"),
+		IndexPkgField: stringsp.NewSet("github.com/roscopecoltran/gcse"),
 	}, func(docID int32, data interface{}) error {
 		gcseInfo = data.(HitInfo)
 		return nil
@@ -113,7 +113,7 @@ func TestIndex(t *testing.T) {
 
 	var indexerInfo HitInfo
 	if err := ts.Search(map[string]stringsp.Set{
-		IndexPkgField: stringsp.NewSet("github.com/daviddengcn/gcse/indexer"),
+		IndexPkgField: stringsp.NewSet("github.com/roscopecoltran/gcse/indexer"),
 	}, func(docID int32, data interface{}) error {
 		gcseInfo = data.(HitInfo)
 		return nil
@@ -170,7 +170,7 @@ func TestIndex_DescNotIndexedBug(t *testing.T) {
 	)
 	hits := []HitInfo{{
 		DocInfo: DocInfo{
-			Package:     "github.com/daviddengcn/gcse",
+			Package:     "github.com/roscopecoltran/gcse",
 			Name:        "gcse",
 			Description: description,
 			ReadmeData:  readme,

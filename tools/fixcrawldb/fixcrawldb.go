@@ -9,11 +9,11 @@ import (
 	"github.com/golangplus/fmt"
 	"github.com/golangplus/strings"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
+	"github.com/roscopecoltran/gcse"
+	"github.com/roscopecoltran/gcse/configs"
+	"github.com/roscopecoltran/gcse/spider"
 )
 
 func loadDocsPkgs(in kv.DirInput) (stringsp.Set, error) {
